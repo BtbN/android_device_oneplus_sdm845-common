@@ -1,0 +1,2 @@
+get_prop(hal_rcsservice, oem_prop)
+allow hal_rcsservice diag_device:chr_file rw_file_perms;

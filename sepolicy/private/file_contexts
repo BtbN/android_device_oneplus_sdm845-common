@@ -8,6 +8,8 @@
 
 # Files in sysfs
 /sys/devices/platform/soc/soc:goodix_fp/proximity_state    u:object_r:sysfs_fpc_proximity:s0
+/sys/devices/virtual/net/rmnet_data[0-9]*(/.*)?            u:object_r:sysfs_rmnet_data:s0
+/sys/class/net/rmnet_data[0-9]*(/.*)?                      u:object_r:sysfs_rmnet_data:s0
 
 # Lights
 /system/bin/hw/android\.hardware\.light@2\.0-service\.oneplus_sdm845    u:object_r:hal_light_sdm845_exec:s0

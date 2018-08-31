@@ -1,0 +1,2 @@
+allow cdsprpcd adsprpcd_file:dir r_dir_perms;
+allow cdsprpcd adsprpcd_file:file r_file_perms;
