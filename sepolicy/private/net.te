@@ -1,6 +1,8 @@
 allow netutils_wrapper diag_device:chr_file rw_file_perms;
-allow netd sysfs_rmnet_data:dir rw_dir_perms;
-allow netd sysfs_rmnet_data:file create_file_perms;
 allow netd proc_net:dir rw_dir_perms;
 allow netd proc_net:file create_file_perms;
 allow proc_net proc:filesystem associate;
+
+# It only accesses the rmnet_data* subdirs, but creating a smaller context on those breaks various other services
+allow netd sysfs:dir rw_dir_perms;
+allow netd sysfs:file create_file_perms;
